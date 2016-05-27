@@ -34,5 +34,6 @@ def feederek():
                 bot.sendMessage(chat_id="@CyberSecPL", text=message)
 
     pickle.dump(fee_links, open("db.p", 'wb'))
+    return
 
 feederek()
