@@ -12,7 +12,7 @@ feed_list =["https://zaufanatrzeciastrona.pl/feed/",
 last_feeds = pickle.load(open("db.p", 'rb'))
 fee_links = []
 
-bot = telegram.Bot(token='228955506:AAGmwy8-a7b5PKjuZjiPk_7OJ0kJ6LiHBvM')
+bot = telegram.Bot(token='')
 
 print(last_feeds)
 print("-----ostatnie feedy---")
