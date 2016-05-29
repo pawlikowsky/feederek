@@ -12,10 +12,10 @@ feed_list =["https://zaufanatrzeciastrona.pl/feed/",
 last_feeds = pickle.load(open("db.p", 'rb'))
 fee_links = []
 
-bot = telegram.Bot(token='')
+bot = telegram.Bot(token='YOUR_TOKEN')
 
 print(last_feeds)
-print("-----ostatnie feedy---")
+print("-----Last feeds---")
 
 def feederek():
     for i in feed_list:
@@ -24,16 +24,16 @@ def feederek():
         for x in range(5):
             fee_links.append(fee['entries'][x]['id'])
             if fee['entries'][x]['id'] in last_feeds:
-                print("Nic nowego - " + fee_title)
+                print("Nothing new - " + fee_title)
             else:
                 sleep(5)
                 entry_title = fee['entries'][x]['title']
                 entry_id = fee['entries'][x]['id']
-                print("Aktualizacja - " + fee_title)
+                print("Updated - " + fee_title)
 
 
                 message = str(fee_title +"\n" + entry_title +"\n" + entry_id)
-                bot.sendMessage(chat_id="@CyberSecPL", text=message)
+                bot.sendMessage(chat_id="@CHANNEL_NAME", text=message)
 
     pickle.dump(fee_links, open("db.p", 'wb'))
     return
