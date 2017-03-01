@@ -5,7 +5,7 @@
 
 Just download feederek.py and db.p (storage for feeds). Create Telegram channel and bot (If you are not familiar with telegram bots and chat read the docs https://core.telegram.org/bots). Set up your settings and run. 
 
-## Setings 
+## Settings 
 
 Insert your feeds links into feed list
 
