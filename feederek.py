@@ -3,11 +3,8 @@ import feedparser
 import telegram
 from time import sleep
 
-feed_list =["https://zaufanatrzeciastrona.pl/feed/",
-            "http://feeds.feedburner.com/niebezpiecznik/",
-            "http://feeds.feedburner.com/sekurak",
-            "http://www.cyberdefence24.pl/rss/zagrozenia",
-            "http://feeds.feedburner.com/CertPolska?format=xml"]
+feed_list =["https://yourfeed.com/feed/",
+            ]
 
 last_feeds = pickle.load(open("db.p", 'rb'))
 fee_links = []
