@@ -25,7 +25,7 @@ Set up your Telegram channel id
 bot.sendMessage(chat_id="@CHANNEL_NAME", text=message)
 ```
 
-If you whant to change number of checking last feeds (default 5), change
+If you want to change number of checking last feeds (default 5), change
 
 ```python
 for x in range(5):
