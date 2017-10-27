@@ -10,7 +10,7 @@ feed_list =["https://yourfeed.com/feed/",
 last_feeds = pickle.load(open("db.p", 'rb'))
 fee_links = []
 
-bot = telegram.Bot(token='TELEGRAM_BOT_TOKEN_HERE')
+bot = telegram.Bot(token='YOUR_TOKEN')
 
 print(last_feeds)
 print("-----Last feeds---")
@@ -31,7 +31,7 @@ def feederek():
 
 
                 message = str(fee_title +"\n" + entry_title +"\n" + entry_id)
-                bot.sendMessage(chat_id="@CHANNEL_NAME_HERE", text=message)
+                bot.sendMessage(chat_id="@CHANNEL_NAME", text=message)
 
     pickle.dump(fee_links, open("db.p", 'wb'))
     sys.exit()
