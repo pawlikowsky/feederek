@@ -1,15 +1,16 @@
-import pickle
 import feedparser
+import pickle
 import telegram
+import sys
 from time import sleep
 
-feed_list =["https://yourfeed.com/feed/",
+feed_list =["http://baikalinform.ru/obyavki-rss",
             ]
 
 last_feeds = pickle.load(open("db.p", 'rb'))
 fee_links = []
 
-bot = telegram.Bot(token='YOUR_TOKEN')
+bot = telegram.Bot(token='228955506:AAGmwy8-a7b5PKjuZjiPk_7OJ0kJ6LiHBvM')
 
 print(last_feeds)
 print("-----Last feeds---")
@@ -30,9 +31,10 @@ def feederek():
 
 
                 message = str(fee_title +"\n" + entry_title +"\n" + entry_id)
-                bot.sendMessage(chat_id="@CHANNEL_NAME", text=message)
+                bot.sendMessage(chat_id="@CyberSecPL", text=message)
 
     pickle.dump(fee_links, open("db.p", 'wb'))
-    return
+    sys.exit()
 
-feederek()
+if __name__ == "__main__":
+    feederek()
