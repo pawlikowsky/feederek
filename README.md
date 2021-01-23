@@ -1,6 +1,8 @@
 # Feederek 
 ### Simple Telegram bot for providing feeds to telegram channel. 
 
+## :warning: This script is outdated and not maintained for years. You can use it, but I recommend to look for other similar tools. :warning:
+
 ## Installation
 
 Just download feederek.py and db.p (storage for feeds). Create Telegram channel and bot (If you are not familiar with telegram bots and chat read the docs https://core.telegram.org/bots). Set up your settings and run. 
